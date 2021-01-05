@@ -1,0 +1,4 @@
+string1
+string2
+la li lu le lo
+how many words is there?

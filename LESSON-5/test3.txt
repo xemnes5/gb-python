@@ -1,0 +1,5 @@
+Ivanov : 17000
+Petrov : 25000
+Pepa   : 15000
+Pupa   : 30000
+Smith  : 19000 
