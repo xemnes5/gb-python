@@ -13,16 +13,15 @@ class Data:
     def meth_2(day, month, year):
         if day not in range(1,32):
             return  'Day is incorrect!'
-        if month not in range(1,13):
+        elif month not in range(1,13):
             return 'Month is incorrect!'
-        if year not in range(1,2022):
+        elif year not in range(1,2022):
             return 'Year is incorrect!'
+        else: return 'Date is OK!'
 
-    def __str__(self):
-        return f'{Data.meth_1(self.dates)}'
+DATES = ['1-2-2010', '50-10-2020', '20-35-2015', '15-12-2050']
 
-d1 = Data('1-20-2030')
-#print(d1.meth_1('1-20-2030'))
-#print(d1.meth_2(1,20,2030))
-#print(d1.meth_2(1,12,2030))
-Data.meth_2(5,10,2020)
+for date in DATES:
+    print(f'raw date: {date}')
+    print('Meth_1 : ', Data.meth_1(date))
+    print('Meth_2 : ', Data.meth_2(*Data.meth_1(date)))

@@ -10,7 +10,7 @@ class Orgtech:
         self.warranty = warranty
     
     def __str__(self):
-        return f'\nМодель: {self.model} \nВендор: {self.vendor} \nГарантия: {self.warranty}'
+        return f'\nМодель: {self.model} \nВендор: {self.vendor} \nГарантия: {self.warranty} года'
 
 
 class Printer(Orgtech):
@@ -18,25 +18,25 @@ class Printer(Orgtech):
         Orgtech.__init__(self, *attrs)
         self.powders = powders
     def __str__(self):
-        return f'{super().__str__()} \nПорошка: {self.powders}'
+        return f'{super().__str__()} \nПорошка осталось: {self.powders}'
 
 class Scaner(Orgtech):
     def __init__(self, *attrs, scans):
         Orgtech.__init__(self, *attrs)
         self.scans = scans
     def __str__(self):
-        return f'{super().__str__()} {self.scans}'
+        return f'{super().__str__()} \nСканов сделано: {self.scans}'
 
 class Xerox(Orgtech):
     def __init__(self, *attrs, xers):
         Orgtech.__init__(self, *attrs)
         self.xers = xers
     def __str__(self):
-        return f'{super().__str__()} {self.xers}'
+        return f'{super().__str__()} \nКсерокопий сделано: {self.xers}'
 
-a1 = Printer('model-1', 'cisco', 4, powders=500)
-b1 = Scaner('model-2', 'junip', 2, scans=150)
-c1 = Xerox('model-3', 'xerow', 3, xers=10)
+a1 = Printer('NP-1', 'LaserJet', 4, powders=75)
+b1 = Scaner('SC-55', 'ScaNNy', 2, scans=230)
+c1 = Xerox('XR-2', 'Xerxos', 3, xers=500)
 #print(a1.model, a1.vendor)
 print(a1)
 print(b1)
